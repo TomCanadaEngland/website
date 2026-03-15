@@ -16,7 +16,7 @@ export function Hero() {
             id="hero-heading"
             className="text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl lg:leading-[1.1]"
           >
-            Track Your Canadian Immigration Application in Real Time
+            Track Your Canadian Immigration Application
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-zinc-600 sm:text-xl">
             Monitor IRCC processing times, track your application progress, and see

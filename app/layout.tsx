@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IRCC Tracker | Track Your Canadian Immigration Application in Real Time",
+  title: "IRCC Tracker | Track Your Canadian Immigration Application",
   description:
     "Monitor IRCC processing times, track your application progress, and see how your timeline compares with others. Trusted by immigrants across Canada.",
   openGraph: {
