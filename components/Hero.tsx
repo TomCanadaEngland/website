@@ -62,7 +62,7 @@ export function Hero() {
         <div className="relative z-0 flex justify-center lg:justify-end">
           <div className="relative h-[520px] w-[260px] sm:h-[640px] sm:w-[320px]">
             <Image
-              src="/phone-mockup.png"
+              src="/phone-mockup-v2.png"
               alt="IRCC Tracker app screenshot"
               fill
               className="object-contain"
