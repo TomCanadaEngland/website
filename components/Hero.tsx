@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section
@@ -58,25 +60,15 @@ export function Hero() {
         </div>
 
         <div className="relative z-0 flex justify-center lg:justify-end">
-          <div className="relative h-[420px] w-[240px] rounded-[2.5rem] border border-zinc-200/80 bg-zinc-50 shadow-2xl shadow-zinc-900/10 ring-1 ring-zinc-200/50 sm:h-[520px] sm:w-[280px]">
-            <div className="absolute inset-4 overflow-hidden rounded-[2rem] bg-gradient-to-b from-slate-100 to-slate-200 sm:inset-5">
-              <div className="flex h-full flex-col p-4">
-                <div className="h-8 w-24 rounded-full bg-zinc-300/80" />
-                <div className="mt-6 space-y-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="h-14 rounded-xl bg-white/90 shadow-sm"
-                      style={{ opacity: 1 - (i - 1) * 0.1 }}
-                    />
-                  ))}
-                </div>
-                <div className="mt-auto flex gap-2 pt-4">
-                  <div className="h-10 flex-1 rounded-lg bg-indigo-500/20" />
-                  <div className="h-10 flex-1 rounded-lg bg-zinc-300/60" />
-                </div>
-              </div>
-            </div>
+          <div className="relative h-[520px] w-[260px] sm:h-[640px] sm:w-[320px]">
+            <Image
+              src="/phone-mockup.png"
+              alt="IRCC Tracker app screenshot"
+              fill
+              className="object-contain"
+              sizes="(max-width: 640px) 260px, 320px"
+              priority
+            />
           </div>
         </div>
       </div>
