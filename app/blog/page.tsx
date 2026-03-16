@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { client } from "@/lib/sanity";
 import { POSTS_QUERY } from "@/lib/sanity.queries";
 import type { Metadata } from "next";
@@ -71,10 +72,12 @@ export default async function BlogPage() {
                 >
                   {post.mainImage && (
                     <div className="relative mb-4 aspect-video overflow-hidden rounded-xl bg-zinc-100">
-                      <img
+                      <Image
                         src={post.mainImage}
                         alt={post.imageAlt ?? post.title}
-                        className="h-full w-full object-cover transition group-hover:scale-[1.02]"
+                        fill
+                        className="object-cover transition group-hover:scale-[1.02]"
+                        sizes="(max-width: 768px) 100vw, 672px"
                       />
                     </div>
                   )}

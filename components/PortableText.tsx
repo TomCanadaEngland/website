@@ -20,9 +20,11 @@ const components = {
       if (!src) return null;
       return (
         <span className="my-6 block overflow-hidden rounded-xl">
-          <img
+          <Image
             src={src}
             alt={value.alt ?? ""}
+            width={800}
+            height={450}
             className="w-full object-cover"
           />
         </span>

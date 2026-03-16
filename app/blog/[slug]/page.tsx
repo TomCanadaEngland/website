@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { client } from "@/lib/sanity";
 import { POST_BY_SLUG_QUERY, POST_SLUGS_QUERY } from "@/lib/sanity.queries";
@@ -71,14 +72,16 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
         {post.mainImage && (
           <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl bg-zinc-100">
-            <img
+            <Image
               src={post.mainImage}
               alt={post.imageAlt ?? post.title}
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
             />
           </div>
         )}
-        {post.body && (
+        {Boolean(post.body) && (
           <div className="prose prose-zinc mt-10 max-w-none prose-p:leading-relaxed prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-orange-600 prose-img:rounded-xl">
             <PortableText value={post.body as import("@portabletext/types").PortableTextBlock[]} />
           </div>
