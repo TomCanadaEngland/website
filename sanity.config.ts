@@ -10,6 +10,7 @@ export default defineConfig({
   title: "IRCC Tracker",
   projectId,
   dataset,
+  basePath: "/studio",
   plugins: [structureTool()],
   schema: {
     types: schema.types,
