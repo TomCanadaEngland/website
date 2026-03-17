@@ -6,7 +6,6 @@ const links = {
     { label: "How it works", href: "#how-it-works" },
   ],
   company: [
-    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
